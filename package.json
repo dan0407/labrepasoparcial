@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-server": "nodemon server/index.js",
-    "start-client": "live-server ./client --port=3000"
+    "start-pasajero": "live-server ./pasajero --port=3000",
+    "start-conductor": "live-server ./conductor --port=3001"
   },
   "keywords": [],
   "author": "",
