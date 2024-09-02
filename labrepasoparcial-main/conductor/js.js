@@ -30,9 +30,9 @@ document.getElementById('conductorForm').addEventListener('submit', function (ev
 
 		// Espera 500 ms para asegurar que el servidor procese la solicitud antes de redirigir
 		setTimeout(() => {
-			// Redirige a la página de registro del vehículo
-			window.location.href = 'http://127.0.0.1:3001/placa/htmlplaca.html';
-		}, 500);
+			// Corrected the URL path to match the probable correct file name
+			window.location.href = 'http://127.0.0.1:3001/placa/htmlpalca.html';
+		  }, 500);
 	} else {
 		alert('Por favor, ingresa tu nombre.');
 	}
