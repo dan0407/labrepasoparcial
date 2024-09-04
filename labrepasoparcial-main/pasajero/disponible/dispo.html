@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Información del Conductor</title>
-		<script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
-		<!-- Incluye Socket.IO -->
-		<script src="./dispo.js" defer></script>
-		<!-- Tu archivo JavaScript -->
-	</head>
-	<body>
-		<h2>Información del Conductor</h2>
-		<p><strong>Nombre:</strong> <span id="conductorName">Cargando...</span></p>
-		<p><strong>Placa:</strong> <span id="conductorPlate">Cargando...</span></p>
-	</body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Información del Conductor</title>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <!-- Incluye Socket.IO -->
+    <script src="./dispo.js" defer></script>
+    <!-- Tu archivo JavaScript -->
+</head>
+<body>
+    <h2>Información del Conductor</h2>
+    <p><strong>Nombre:</strong> <span id="conductorName">Cargando...</span></p>
+    <p><strong>Placa:</strong> <span id="conductorPlate">Cargando...</span></p>
+
+    <!-- Campos de entrada y botones -->
+    <div>
+        <label for="originInput">Origen:</label>
+        <input type="text" id="originInput" placeholder="Ingresa el origen" />
+        <button id="buttonOrigin">Establecer Origen</button>
+    </div>
+    <div>
+        <label for="destinationInput">Destino:</label>
+        <input type="text" id="destinationInput" placeholder="Ingresa el destino" />
+        <button id="buttonDestination">Establecer Destino</button>
+    </div>
+    <div>
+        <button id="buttonAccept">Aceptar Viaje</button>
+    </div>
+</body>
 </html>
