@@ -1,37 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   console.log('Buscando...');
-
-//   // Hacer la solicitud para obtener la información de los vehículos
-//   fetch('http://127.0.0.1:5050/vehiculos/')
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error('Error en la solicitud: ' + response.statusText);
-//       }
-//       return response.json(); // Convertir la respuesta en JSON
-//     })
-//     .then(data => {
-//       console.log('Datos recibidos:', data); // Aquí tienes los datos de los vehículos
-//       // Puedes usar los datos recibidos para actualizar tu página, mostrar en consola, etc.
-      
-//       // Ejemplo: Mostrar información de cada vehículo en la consola
-//       data.forEach(vehicle => {
-//         console.log(`Vehículo: ${vehicle.username}, Placa: ${vehicle.plate}`);
-//       });
-
-//       // Aquí podrías redirigir a otra página o realizar alguna acción con los datos
-//       // window.location.href = 'resultado.html'; // Descomenta si necesitas redirigir
-//     })
-//     .catch(error => {
-//       console.error('Error al obtener los datos:', error); // Manejo de errores
-//     });
-
-//   // Simulación de un proceso de búsqueda con un temporizador
-//   setTimeout(() => {
-//     console.log('Búsqueda finalizada');
-//     // window.location.href = 'resultado.html'; // Redirige a la página de resultados si es necesario
-//   }, 5000); // Cambia el tiempo según sea necesario
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Buscando...');
 
@@ -45,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       console.log('Datos recibidos:', data); // Aquí tienes los datos de los vehículos
-      
+
       // Obtener el div para mostrar los resultados
       const resultsDiv = document.getElementById('results');
 

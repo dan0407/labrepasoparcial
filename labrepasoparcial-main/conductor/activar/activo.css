@@ -1,0 +1,80 @@
+/* Estilos generales */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Contenedor de botones */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin: 0.5rem 0;
+}
+
+/* Estilo para el botón de activar */
+button.activate {
+  background-color: #28a745;
+  /* Verde */
+  color: white;
+}
+
+button.activate:hover {
+  background-color: #218838;
+}
+
+/* Estilo para el botón de eliminar */
+button.delete {
+  background-color: #dc3545;
+  /* Rojo */
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+/* Resultados */
+#results {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}

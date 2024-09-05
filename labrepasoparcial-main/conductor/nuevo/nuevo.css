@@ -1,0 +1,78 @@
+/* Estilos generales */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Contenedor de información */
+#info-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Encabezados de sección */
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Lista de pasajeros */
+#passenger-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#passenger-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#passenger-list li:last-child {
+  border-bottom: none;
+}
+
+/* Información de origen y destino */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #info-container {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
