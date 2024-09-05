@@ -6,12 +6,11 @@ document.getElementById('conductorForm').addEventListener('submit', function (ev
 	const username = document.getElementById('username').value.trim();
 
 	if (username) {
-		// Emite el evento de registro con los datos del conductor
 		socket.emit('register', { username, role: 'conductor' });
 
 		setTimeout(() => {
-					window.location.href = `http://127.0.0.1:3001/placa/htmlpalca.html?conductorId=${username}`;
-		  }, 500);
+			window.location.href = `http://127.0.0.1:3001/placa/htmlpalca.html?conductorId=${username}`;
+		}, 500);
 	} else {
 		alert('Por favor, ingresa tu nombre.');
 	}

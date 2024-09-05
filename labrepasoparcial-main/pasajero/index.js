@@ -9,13 +9,10 @@ document.getElementById('pasajeroForm').addEventListener('submit', function (eve
 		socket.emit('register', { username, role: 'pasajero' });
 		alert('Pasajero registrado');
 
-		// Solicitar información del conductor después de registrar al pasajero
 		socket.emit('requestConductorInfo');
 
-		// Escuchar la respuesta del servidor con la información del conductor
 		socket.on('conductorInfo', (data) => {
 			const { name, plate } = data;
-			// Redirigir a la página con los datos del conductor en la URL
 			window.location.href = `http://127.0.0.1:3000/disponible/dispo.html`;
 		});
 	} else {

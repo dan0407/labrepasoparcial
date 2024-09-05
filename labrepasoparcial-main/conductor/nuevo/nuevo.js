@@ -1,8 +1,5 @@
-// client.js
-
 const API_URL = 'http://localhost:5050';
 
-// Fetch passengers, origin, and destination data
 async function fetchData() {
 	try {
 		console.log('Fetching data from server...');
@@ -21,7 +18,7 @@ async function fetchData() {
 
 function updatePassengerList(passengers) {
 	const passengerList = document.getElementById('passenger-list');
-	passengerList.innerHTML = ''; // Clear current list
+	passengerList.innerHTML = '';
 	passengers.forEach((passenger) => {
 		const listItem = document.createElement('li');
 		listItem.textContent = `Nombre: ${passenger.username}`;
@@ -44,15 +41,13 @@ function displayErrorMessage(message) {
 	}
 }
 
-// Initialize WebSocket connection
 const socket = io(API_URL, { path: '/real-time' });
 
-// WebSocket event listeners
 socket.on('setOrigin', (data) => updateTripInfo(data.origin, null));
 socket.on('setDestination', (data) => updateTripInfo(null, data.destination));
 socket.on('updateData', fetchData);
 
 window.onload = () => {
-    console.log('Window loaded, fetching data...');
-    fetchData();
+	console.log('Window loaded, fetching data...');
+	fetchData();
 };

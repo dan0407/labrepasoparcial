@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #f8f9fa;
@@ -18,7 +17,7 @@ h1 {
   text-align: center;
 }
 
-/* Contenedor de información */
+
 #info-container {
   background-color: white;
   padding: 2rem;
@@ -28,7 +27,7 @@ h1 {
   width: 100%;
 }
 
-/* Encabezados de sección */
+
 h2 {
   font-size: 1.5rem;
   color: #333;
@@ -37,7 +36,7 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-/* Lista de pasajeros */
+
 #passenger-list {
   list-style-type: none;
   padding: 0;
@@ -53,7 +52,7 @@ h2 {
   border-bottom: none;
 }
 
-/* Información de origen y destino */
+
 p {
   font-size: 1.1rem;
   margin-bottom: 1rem;

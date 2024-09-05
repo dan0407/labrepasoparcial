@@ -7,30 +7,24 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (!response.ok) {
 					throw new Error('Error en la solicitud: ' + response.statusText);
 				}
-				return response.json(); // Convertir la respuesta en JSON
+				return response.json();
 			})
 			.then((data) => {
 				console.log('Datos recibidos:', data);
 
-				// Obtener el div para mostrar los resultados
 				const resultsDiv = document.getElementById('results');
 
-				// Verificar si el div fue encontrado
 				if (!resultsDiv) {
 					console.error('No se encontró el div con id "results"');
 					return;
 				}
 
-				// Limpiar el contenido actual del div
 				resultsDiv.innerHTML = '';
 
-				// Crear un elemento para cada vehículo y añadirlo al div
 				data.forEach((vehicle) => {
-					// Crear un nuevo div para cada vehículo
 					const vehicleDiv = document.createElement('div');
-					vehicleDiv.className = 'vehicle-item'; // Puedes agregar estilos específicos en tu CSS
+					vehicleDiv.className = 'vehicle-item';
 
-					// Añadir el contenido al nuevo div
 					vehicleDiv.innerHTML = `
                       <p><strong>Vehículo:</strong> ${vehicle.username}</p>
                       <p><strong>Placa:</strong> ${vehicle.plate}</p>
@@ -38,11 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
                       <button class="delete-vehicle-btn" data-plate="${vehicle.plate}">Eliminar</button>
                   `;
 
-					// Añadir el nuevo div al div de resultados
 					resultsDiv.appendChild(vehicleDiv);
 				});
 
-				// Añadir event listeners para los botones de eliminar
 				document.querySelectorAll('.delete-vehicle-btn').forEach((button) => {
 					button.addEventListener('click', async (event) => {
 						const plateToDelete = event.target.getAttribute('data-plate');
@@ -57,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 								}
 
 								alert('Vehículo eliminado correctamente');
-								fetchVehicles(); // Actualiza la lista de vehículos después de eliminar
+								fetchVehicles();
 							} catch (error) {
 								console.error('Error al eliminar:', error);
 								alert('Error al eliminar el vehículo');
@@ -66,23 +58,20 @@ document.addEventListener('DOMContentLoaded', function () {
 					});
 				});
 
-				// Añadir event listeners para los botones de activar
 				document.querySelectorAll('.activate-vehicle-btn').forEach((button) => {
 					button.addEventListener('click', (event) => {
 						const plateToActivate = event.target.getAttribute('data-plate');
 
-						// Show activation message
 						alert(`Has activado vehículo con placa ${plateToActivate}`);
 
-						// Redirigir a otra página al activar
 						window.location.href = `http://127.0.0.1:3001/nuevo/nuevo.html`;
 					});
 				});
 			})
 			.catch((error) => {
-				console.error('Error al obtener los datos:', error); // Manejo de errores
+				console.error('Error al obtener los datos:', error);
 			});
 	}
 
-	fetchVehicles(); // Cargar los vehículos al inicio
+	fetchVehicles();
 });
