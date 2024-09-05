@@ -1,5 +1,0 @@
-{
-    "watch": ["server/index.js"],
-    "ignore": ["client-player", "client-results-screen"],
-    "exec": "node server/index.js"
-  }
